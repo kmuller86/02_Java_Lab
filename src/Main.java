@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.*;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,12 +20,43 @@ public class Main {
                 elementów listy
           */
 
+        List<String> Lista = new ArrayList<>();
+        Scanner scan = new Scanner(System.in);
+
+        for(int i=1;i<=5;i++)
+        {
+            Lista.add(scan.next());
+        }
+        wyswietlElementyListy(Lista);
+        System.out.println();
+        usunDwaOstatnieIDodajTrzyInne(Lista);
+        System.out.println();
+        wyswietlElementyListy(Lista);
+        int wielkosc = Lista.size();
+        System.out.printf("Lista zawiera: %d elementów",wielkosc);
+        System.out.println();
+        Collections.reverse(Lista);
+        wyswietlElementyListy(Lista);
+
 
          /* zad.2 Napisać program który stworzy Set<Integer> i wprowadzamy 10 liczb z klawiatury
                 niech liczby się powtarzają, proszę posortować a następnie wyświetlić zawartość set-a w konsoli
                  a następnie przeiterować i wyświetlić forEach-em (jak wyżej)
          */
 
+    }
+    static void wyswietlElementyListy(List<String> Lista)
+    {
+        Lista.forEach(System.out::println);
+    }
+    static void usunDwaOstatnieIDodajTrzyInne(List<String> Lista)
+    {
+        Lista.remove(4);
+        Lista.remove(3);
+
+        Lista.add("Koń");
+        Lista.add("Zebra");
+        Lista.add("Konik polny");
     }
 
 }
