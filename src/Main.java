@@ -19,7 +19,7 @@ public class Main {
                 d) następnie proszę wykonać odwrotne sortowanie i znów użyć metody z punktu b) do wyświetlenia
                 elementów listy
           */
-
+        /* Nazwy zmiennych i metod piszemy z małej litery */
         List<String> Lista = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
 
